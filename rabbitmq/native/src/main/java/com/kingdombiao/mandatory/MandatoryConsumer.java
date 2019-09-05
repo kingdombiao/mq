@@ -8,7 +8,7 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * 描述:
- * 消费者 【不自动确认，也不手动确认】
+ * 消费者
  *
  * @author biao
  * @create 2019-09-02 15:06
@@ -43,7 +43,6 @@ public class MandatoryConsumer {
                 String msg=new String(body,"utf-8");
                 System.out.println("Received["+envelope.getRoutingKey()+"]"+msg);
 
-                // TODO: 2019/9/3  不手动确认看一下效果
             }
         };
 

@@ -80,7 +80,7 @@ public class MandatoryProducer {
         for (int i=0;i<logLevel.length;i++){
             String routeKey=logLevel[i];
             String msg="hello,rabbitmq-"+i;
-            //发布消息
+            //发布消息 同时设置mandatory=true
             channel.basicPublish(EXCHANGE_NAME,routeKey,true,null,msg.getBytes());
 
             System.out.println("Sent "+ routeKey+":"+msg+ "成功");
